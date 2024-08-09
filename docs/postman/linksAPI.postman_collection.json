@@ -1,0 +1,869 @@
+{
+	"info": {
+		"_postman_id": "84031b03-6672-4cca-8703-b021f6f72f91",
+		"name": "linksAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27058760"
+	},
+	"item": [
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "CreateCommentByIdLink",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDUwNzcyLCJleHAiOjE3MjMxMzcxNzJ9.oFfyxn_F3hpT_fYliBE7R1zdhr9uQpd0Av5o_6F8TyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment_text\": \"Este es elcomentario que hace victor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/comments/post/45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"post",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInVzZXJuYW1lIjoiSmVzdXMiLCJlbWFpbCI6Implc3VzQGplc3VzLmNvbSIsImlhdCI6MTcyMjk0OTcxMSwiZXhwIjoxNzIzMDM2MTExfQ.I4vyWu6fy_7JgcCtUQTMwKTJwXO0z2d3lhjMX8CIwrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment_text\": \"Este es mi comentario para link con id 40, con la ruta del endpoint cambiada, con la palabra POST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/comments/post/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"post",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetComments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment_text\": \"Este es mi comentario para link con id 40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/comments/post/48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"post",
+								"48"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "links",
+			"item": [
+				{
+					"name": "CreateLink",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://ejemplo.com/ejemplo-pipo",
+									"type": "text"
+								},
+								{
+									"key": "titulo",
+									"value": "ejemplo pipo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef53420-b77c-4400-bffe-74f9e0204181",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "ejemplo ejemplo pipo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/links/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"links",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLinks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDQ3ODEyLCJleHAiOjE3MjMxMzQyMTJ9.rYk108AwxkW8hx-85ycXW721l3ClAVzzn0jbofD8XG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://ejemplo.com/desarrollo-web",
+									"type": "text"
+								},
+								{
+									"key": "titulo",
+									"value": "Programación web",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef53420-b77c-4400-bffe-74f9e0204181"
+								},
+								{
+									"key": "description",
+									"value": "Recuros para aprender programación web",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/links?limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"links"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLinkById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDQ3ODEyLCJleHAiOjE3MjMxMzQyMTJ9.rYk108AwxkW8hx-85ycXW721l3ClAVzzn0jbofD8XG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://ejemplo.com/desarrollo-web",
+									"type": "text"
+								},
+								{
+									"key": "titulo",
+									"value": "Programación web",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef53420-b77c-4400-bffe-74f9e0204181"
+								},
+								{
+									"key": "description",
+									"value": "Recuros para aprender programación web",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/links/44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"links",
+								"44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteLink",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://ejemplo.com/desarrollo-web",
+									"type": "text"
+								},
+								{
+									"key": "titulo",
+									"value": "Programación web",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef53420-b77c-4400-bffe-74f9e0204181"
+								},
+								{
+									"key": "description",
+									"value": "Recuros para aprender programación web",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/links/48",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"links",
+								"48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLink",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://ejemplo.com/ejemplo55",
+									"type": "text"
+								},
+								{
+									"key": "titulo",
+									"value": "ejemplo 55",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ejemplo ejemplo 55",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef53420-b77c-4400-bffe-74f9e0204181"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/links/update/47",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"links",
+								"update",
+								"47"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ratings",
+			"item": [
+				{
+					"name": "SaveVote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/vote/49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"vote",
+								"49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAverageRatings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/average/49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"average",
+								"49"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "NewUser - Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "pipo_sanchez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pipo@pipo.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asdf",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Descripcion pipo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef50af0-7a3f-4820-90cc-25cf88e47d0d",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pipo@pipo.com\",\r\n    \"password\": \"asdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserProfileById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoiamVzdXNfc2FuY2hleiIsImVtYWlsIjoiamVzdXNAamVzdXMuY29tIiwiaWF0IjoxNzIzMDQ2NDczLCJleHAiOjE3MjMxMzI4NzN9._CMTjC5Paitgj_juV3B0S1eNJ9ziXX2252pgREvzKiQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDQ3ODEyLCJleHAiOjE3MjMxMzQyMTJ9.rYk108AwxkW8hx-85ycXW721l3ClAVzzn0jbofD8XG0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoiamVzdXNfc2FuY2hleiIsImVtYWlsIjoiamVzdXNAamVzdXMuY29tIiwiaWF0IjoxNzIzMDQ2NDczLCJleHAiOjE3MjMxMzI4NzN9._CMTjC5Paitgj_juV3B0S1eNJ9ziXX2252pgREvzKiQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"victor_sanchez\",\r\n    \"email\" : \"victor@victor.com\",\r\n    \"description\" : \" Descripciono de victor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpadtePassword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoiamVzdXNfc2FuY2hleiIsImVtYWlsIjoiamVzdXNAamVzdXMuY29tIiwiaWF0IjoxNzIzMDQ2NDczLCJleHAiOjE3MjMxMzI4NzN9._CMTjC5Paitgj_juV3B0S1eNJ9ziXX2252pgREvzKiQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"asdfasdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpadteImage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoiamVzdXNfc2FuY2hleiIsImVtYWlsIjoiamVzdXNAamVzdXMuY29tIiwiaWF0IjoxNzIzMDQ2NDczLCJleHAiOjE3MjMxMzI4NzN9._CMTjC5Paitgj_juV3B0S1eNJ9ziXX2252pgREvzKiQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef50af0-7a3f-4820-90cc-25cf88e47d0d"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserLinks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDQ3ODEyLCJleHAiOjE3MjMxMzQyMTJ9.rYk108AwxkW8hx-85ycXW721l3ClAVzzn0jbofD8XG0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/links?limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"links"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserLinksById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInVzZXJuYW1lIjoidmljdG9yX3NhbmNoZXoiLCJlbWFpbCI6InZpY3RvckB2aWN0b3IuY29tIiwiaWF0IjoxNzIzMDQ3ODEyLCJleHAiOjE3MjMxMzQyMTJ9.rYk108AwxkW8hx-85ycXW721l3ClAVzzn0jbofD8XG0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/links/19?limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"links",
+								"19"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserVotes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoicGlwb19zYW5jaGV6IiwiZW1haWwiOiJwaXBvQHBpcG8uY29tIiwiaWF0IjoxNzIzMDQ5NjAzLCJleHAiOjE3MjMxMzYwMDN9.fHDHvaxXcVOeB5h-jmdP1lyUnha6lXN0iJpZ3uW0Z5I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/votes/45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"votes",
+								"45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
