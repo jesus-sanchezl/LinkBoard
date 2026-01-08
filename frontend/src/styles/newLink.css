@@ -1,0 +1,130 @@
+.newPublication {
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    width: 80%; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.newPublication h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.newPublication form {
+    background: #ffffff;
+    margin: 16px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.newPublication form label {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.newPublication form input[type="text"],
+.newPublication form input[type="url"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    font-size: 16px;
+    color: #333333;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.newPublication form input[type="text"]:focus,
+.newPublication form input[type="url"]:focus {
+    border-color: #000000; 
+    outline: none;
+}
+
+.newPublication form textarea {
+    resize: none;
+    font-size: 16px;
+    width: 100%;
+    max-height: 100px;
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    color: #333333;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.newPublication form textarea:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+
+
+form .image-field {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .image-field input[type="file"] {
+    display: none;
+}
+
+
+form .image-field label {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+form .image-field label:hover {
+    background-color: #333333;
+}
+
+.newPublication .btn {
+    background-color: #000000; 
+    width: 100%;
+    color: white;
+    padding: 12px 20px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newPublication .btn:hover {
+    background-color: #333333; 
+}
+
+.error {
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: #e74c3c;
+    font-size: 14px;
+}

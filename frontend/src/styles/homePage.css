@@ -1,0 +1,29 @@
+.principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 2rem 1rem; 
+    box-sizing: border-box; 
+    background-color: #F4F4F4; 
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.list > h2 {
+    text-align: center;
+    font-size: 2rem; 
+    color: #1c1c1e;
+    font-family: "Syne", sans-serif;
+    font-weight: 600; 
+    margin-bottom: 1rem; 
+    text-transform: uppercase; 
+}

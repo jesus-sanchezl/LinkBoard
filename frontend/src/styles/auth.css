@@ -1,0 +1,98 @@
+
+.center {
+    position: relative;
+    max-width: 100%;  
+    width: 450px; 
+    margin: 80px auto;
+    padding: 30px;
+    background: #fff;
+    
+}
+
+
+.center h1 {
+    font-size: 2em;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+}
+
+
+.center .inputbox {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.center .inputbox input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid #ccc; 
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    color: #333;
+    transition: border-color 0.3s ease;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+    box-shadow: none; /* Elimina sombras */
+}
+
+.center .inputbox input:focus {
+    border-color: #333;  
+}
+
+
+.center .inputbox label {
+    font-size: 1em;
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.center .text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.center .text a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.center .text a:hover {
+    color: #000;
+}
+
+
+.center .btn {
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.center .btn:hover {
+    background-color: #f7f7f7;
+}
+
+
+.error {
+    margin-top: 10px;
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+}

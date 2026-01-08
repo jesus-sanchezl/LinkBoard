@@ -1,0 +1,141 @@
+
+.editPublication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center; 
+    height: 80vh; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;  
+    
+}
+
+
+.editPublication h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+
+.editPublication form {
+    background: #ffffff;  
+    padding: 20px;
+    border-radius: 12px;  
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);  
+    width: 80%; 
+    max-width: 600px;  
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;  
+}
+
+
+.editPublication form label {
+    font-family: "Arimo", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #18171c;
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+.editPublication form input[type="text"],
+.editPublication form input[type="url"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    color: #18171c; 
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.editPublication form input[type="text"]:focus,
+.editPublication form input[type="url"]:focus {
+    border-color: #333333;
+}
+
+
+.editPublication form textarea {
+    resize: none;
+    font-size: 16px;
+    width: 100%;
+    height: 100px;  
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    color: #18171c;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+
+.editPublication form textarea:focus {
+    border-color: #333333;
+}
+
+
+form .imageField {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .imageField input[type="file"] {
+    display: none;
+}
+
+form .imageField label {
+    background-color: #000000;  
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+form .imageField label:hover {
+    background-color: #333333;
+}
+
+
+.editPublication .btn {
+    background-color: #000000; 
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    font-family: "Arimo", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+
+.editPublication .btn:hover {
+    background-color: #333333;
+}
+
+
+.error {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: #e74c3c;  
+    font-size: 14px;
+    text-align: center;
+}
